@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 # Creating CreditCard Class
 # Initialize with zero
 class CreditCard
@@ -9,4 +11,14 @@ class CreditCard
   def charge(amount)
     @balance += amount
   end
+
+  def payment(amount)
+    @balance -= amount
+  end
 end
+
+balance = CreditCard.new
+
+puts balance
+puts balance.charge(100)
+puts balance.payment(50)
